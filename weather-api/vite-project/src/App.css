@@ -1,0 +1,304 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.weather-container h1 {
+  color: #1e293b;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 10px 0 25px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  color: white;
+  padding: 25px 15px;
+  border-radius: 15px;
+}
+
+.weather-card h2 {
+  font-size: 24px;
+}
+
+.weather-card img {
+  width: 100px;
+}
+
+.weather-card h1 {
+  font-size: 50px;
+  color: white;
+}
+
+.condition {
+  text-transform: capitalize;
+  margin: 10px 0 25px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  border-top: 1px solid #ffffff66;
+  padding-top: 20px;
+}
+
+.weather-info div {
+  flex: 1;
+}
+
+.weather-info h3 {
+  font-size: 15px;
+}
+
+.weather-info p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error {
+  color: red;
+  margin: 15px;
+}
+
+/* Navigation Bar */
+
+.weather-nav {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0 25px;
+  flex-wrap: wrap;
+}
+
+.weather-nav button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.weather-nav button:hover {
+  background: #bfdbfe;
+}
+
+.weather-nav button.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* Dashboard */
+
+.dashboard-section > h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+
+/* Forecast Section */
+
+.forecast-section {
+  margin-top: 25px;
+}
+
+.forecast-section > h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.forecast-card {
+  background: #eff6ff;
+  padding: 12px 8px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.forecast-card h3 {
+  font-size: 14px;
+  color: #1e293b;
+}
+
+.forecast-card img {
+  width: 65px;
+}
+
+.forecast-card h2 {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.forecast-card p {
+  font-size: 12px;
+  text-transform: capitalize;
+  margin: 6px 0;
+  color: #475569;
+}
+
+.forecast-card small {
+  font-size: 11px;
+  color: #64748b;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 400px) {
+
+  .weather-nav {
+    gap: 4px;
+  }
+
+  .weather-nav button {
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* Air Quality Section */
+
+.air-quality-section {
+  margin-top: 25px;
+  padding: 18px;
+  background: #eff6ff;
+  border-radius: 14px;
+  text-align: left;
+}
+
+.air-quality-section > h2 {
+  font-size: 20px;
+  color: #1e293b;
+  margin-bottom: 18px;
+}
+
+.air-quality-main {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.aqi-number {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.air-quality-main h3 {
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.air-quality-main p {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.air-quality-main small {
+  color: #64748b;
+}
+
+.pollutant-heading {
+  margin: 20px 0 12px;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.pollutant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pollutant-card {
+  background: white;
+  padding: 12px 6px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pollutant-card h4 {
+  font-size: 13px;
+  color: #475569;
+}
+
+.pollutant-card p {
+  font-size: 17px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 7px 0 3px;
+}
+
+.pollutant-card small {
+  font-size: 10px;
+  color: #64748b;
+}
+
+@media (max-width: 400px) {
+  .pollutant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
